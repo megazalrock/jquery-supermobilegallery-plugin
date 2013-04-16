@@ -221,14 +221,4 @@
 			return this;
 		}
 	});
-
-
-	$(function(){
-		$('#js_gallery').superMobileGallery({
-			selectors:{
-				next:'.js_next',
-				prev:'.js_prev'
-			}
-		});
-	});
 })(jQuery);

@@ -7,6 +7,16 @@
 	<link rel="stylesheet" href="style.css" media="all" />
 	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
 	<script type="text/javascript" src="../jquery-supermobile-gallery.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('#js_gallery').superMobileGallery({
+				selectors:{
+					next:'.js_next',
+					prev:'.js_prev'
+				}
+			});
+		});
+	</script>
 </head>
 <body>
 	<div id="js_gallery" class="gallery">
