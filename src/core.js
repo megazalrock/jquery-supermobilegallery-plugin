@@ -14,6 +14,7 @@
 			other:{
 				retinaImageLoader:'enable',
 				visibleImageNum:3,
+				autoLoadRetinaImage:true,
 				retinaImageSuffix:'_x2',
 				snapDistance:80,
 				imageSpace:20
@@ -44,7 +45,6 @@
 		}else if(css3Duration.indexOf('s') !== -1){
 			self.options.animation.duration = parseFloat(css3Duration) * 1000;
 		}
-		console.log(self.options.animation.duration);
 
 		self.posArray = [
 			-self.imageWidth / 2 - self.imageSpace - self.imageWidth - self.imageSpace - self.imageWidth,
@@ -197,7 +197,7 @@
 						.data('isLoaded',true);
 				});
 			var imgSrc = $target.attr('data-src');
-			if(window.devicePixelRatio > 1){
+			if(window.devicePixelRatio > 1 && self.options.other.autoLoadRetinaImage){
 				imgSrc = imgSrc.replace('.jpg',self.options.other.retinaImageSuffix + '.jpg');
 			}
 			$target
