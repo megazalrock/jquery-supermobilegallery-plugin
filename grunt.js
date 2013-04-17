@@ -55,6 +55,16 @@ module.exports = function(grunt){
 			dist : {
 				src : ['demo/style.less'],
 				dest : 'demo/style.css'
+			}/*,
+			core : {
+				src : ['src/core.less'],
+				dest : 'jquery-supermobile-gallery.css'
+			}*/
+		},
+		cssmin : {
+			dist : {
+				src : ['jquery-supermobile-gallery.css'],
+				dest : 'jquery-supermobile-gallery.min.css'
 			}
 		}
 	});

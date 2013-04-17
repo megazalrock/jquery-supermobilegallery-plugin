@@ -182,11 +182,6 @@ fieldset {
   -khtml-user-drag: none;
 }
 .gallery .images li {
-  -webkit-transition: left 100ms ease-in-out;
-  -moz-transition: left 100ms ease-in-out;
-  -ms-transition: left 100ms ease-in-out;
-  -o-transition: left 100ms ease-in-out;
-  transition: left 100ms ease-in-out;
   width: 240px;
   height: 320px;
   position: absolute;
