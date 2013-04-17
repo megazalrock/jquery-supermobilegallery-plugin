@@ -39,17 +39,19 @@
 		self.current = -1;
 		self.length = self.$.imagesChildren.length;
 		self.preparedImagesIndex = [];
+		self.wrapWidth = self.$.wrap.width();
 		self.imageWidth = self.$.imagesChildren.eq(0).width();
 		self.imageSpace = self.options.other.imageSpace;
 		self.btnDisabled = false;
+		var centerPos = (self.wrapWidth - self.imageWidth) / 2;
 		self.posArray = [
-			-self.imageWidth / 2 - self.imageSpace - self.imageWidth - self.imageSpace - self.imageWidth,
-			-self.imageWidth / 2 - self.imageSpace - self.imageWidth,
-			-self.imageWidth / 2 - self.imageSpace,
-			self.imageWidth / 2,
-			self.imageWidth / 2 + self.imageSpace + self.imageWidth,
-			self.imageWidth / 2 + self.imageSpace + self.imageWidth + self.imageSpace + self.imageWidth,
-			self.imageWidth / 2 + self.imageSpace + self.imageWidth + self.imageSpace + self.imageWidth + self.imageSpace + self.imageWidth
+			centerPos - (self.imageSpace + self.imageWidth)*3,
+			centerPos - (self.imageSpace + self.imageWidth)*2,
+			centerPos - (self.imageSpace + self.imageWidth),
+			centerPos,
+			centerPos + (self.imageSpace + self.imageWidth),
+			centerPos + (self.imageSpace + self.imageWidth)*2,
+			centerPos + (self.imageSpace + self.imageWidth)*3
 		];
 		self.$.imagesChildren
 			.css({
