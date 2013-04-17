@@ -145,7 +145,6 @@
 		var $current = self.$.imagesChildren.eq(self.current);
 		var currentPos = parseInt($current.css('left'),10);
 		if(Math.abs(distance) >= self.options.other.snapDistance){
-			console.log('hello');
 			if(distance > 0){
 				if(self.current - 1 >= 0){
 					self.changeTo(self.current - 1);
